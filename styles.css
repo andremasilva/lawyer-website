@@ -1,0 +1,247 @@
+body {
+	font-family: "Lexend Mega", sans-serif;
+	color: black;
+	margin:0
+}
+
+.nav-container{
+	display: flex;
+	width: 100%;
+	position: fixed;
+	width: 10
+}
+
+.nav-container.sticky{
+	background-color: #f5f5f5f8;
+	transition: 0.5s ease-in-out;
+}
+
+.logo{
+	height: 80px;
+	width: 200px;
+	cursor: pointer;
+}
+
+.right-side-nav{
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+}
+
+.nav-items ul{
+	display: flex;
+	list-style-type: none;
+	gap: 50px;
+}
+
+li a{
+	font: normal 15px/125% "futura",Arial,Helvetica,sans-serif;
+	text-decoration:none;
+	text-transform: uppercase;
+	color: #141414;
+	cursor: pointer;
+}
+
+li a:hover{
+	text-decoration:underline;
+}
+
+.left-side-nav{
+	display: flex;
+	align-items: center;
+}
+
+.langues-container ul{
+	list-style-type: none;
+	margin-right: 10px;
+}
+
+.mission {
+	display: flex;
+	height: 700px;
+	width: 100%;
+	background-image: url(https://img.freepik.com/free-photo/low-view-modern-skyscrapers-office-buildings_23-2148836791.jpg?t=st=1656607611~exp=1656608211~hmac=cf95c6ad9c830b833cecf5fddf4a11a06227db7ae547eeafff597fa0e0cc4d2d&w=1480) ;
+	background-size: 100% 100%;
+	padding-top: 35px;
+}
+
+.content{
+	display: flex;
+	width: 100%;
+	color: rgb(31, 29, 29);
+	justify-content: center;
+	align-items: center;
+}
+
+.content h2{
+	font:"futura",Arial,Helvetica,sans-serif;
+	color: #141414;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-size: 90px;
+}
+
+.content h4{
+	font: normal 14px/175% "futura",Arial,Helvetica,sans-serif;
+	color: #141414;
+	margin-top: 0;
+	font-size: 20px;
+}
+
+/*find us block */
+
+.findUs{
+	margin-top: 50px;
+	width: 100%;
+	height: 400px;	
+	background-color: #b8aeae17;
+}
+
+.finUs-Container{
+	display: flex;
+	justify-content: space-evenly;
+    align-items: center;
+	height: 400px;
+	padding: 8px;
+
+}
+
+.directions, .street , .number, .emaile{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+	font-size: 15px;
+}
+
+.directions img{
+	height: 60px;
+	width: 60px;
+}
+
+
+/* Form */
+
+.contacts{
+
+	width: 100%;
+	height: 600px;
+	text-align: center;	
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+.container-block{
+	width: 100%;
+    height: 595px;
+	display: flex;
+	justify-content:center;
+}
+
+.contacts-container{
+	width: 350px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	background-color: #b8aeae;
+}
+
+
+.form{
+	display: flex;
+	flex-direction: column;	
+	text-align: left;
+	padding: 30px;
+}
+
+label { 
+	color: rgb(36, 34, 34);
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: 0.5rem 0;
+	padding: 5px;
+	border: none;
+}
+
+
+img{    
+    height: 595px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+ 
+.btn{
+	margin-top: 5px;
+	height: 30px;
+	width: 100px;
+	background: azure;
+	border-radius: 6px;
+    border: none;
+	cursor: pointer;
+	padding: 5px;
+	text-align: center;
+	font-family:  Arial, sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	cursor: pointer
+}
+
+.btn:active{
+	height: 30px;
+	width: 100px;
+	background: antiquewhite;
+}
+
+.send{
+	color: red;
+	margin-top: 4px;
+
+}
+
+/* Footer */
+.footer{
+	margin-top: 20px;
+	width: 100%;
+	font-size: 12px;
+}
+
+.fLists{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
+}
+
+.fList{
+	display: flex;
+	list-style: none;
+	padding: 0;
+	flex-direction: column;
+	justify-content: space-between;;
+	align-items: center;
+
+}
+h6{
+	font-size: 13px;
+}
+
+.fList img{
+	height: 60px;
+	width: 120px;
+}
+
+.ListItem{
+	margin-bottom: 10px;
+	color: #141414;
+	cursor: pointer;
+}
+
+
+@media
+(prefers-reduced-motion: no-preference) {
+  html {
+	scroll-behavior: smooth;
+  }
+}
