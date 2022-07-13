@@ -8,7 +8,8 @@ body {
 	display: flex;
 	width: 100%;
 	position: fixed;
-	width: 10
+	width: 10;
+	z-index:999
 }
 
 .nav-container.sticky{
@@ -79,7 +80,18 @@ li a:hover{
 	margin-top: 30px;
 	margin-bottom: 10px;
 	font-size: 90px;
+	position: relative;
+    animation-name: text;
+    animation-duration: 3s;
 }
+
+@keyframes text {
+  0%   { right:1000px; bottom:0px;}
+  25%  { right:50px; bottom:0px;}
+  50%  { right:20px; bottom:0px;}
+  100% { right:0px; bottom:0px;}
+}
+
 
 .content h4{
 	font: normal 14px/175% "futura",Arial,Helvetica,sans-serif;
@@ -93,25 +105,37 @@ li a:hover{
 .findUs{
 	margin-top: 50px;
 	width: 100%;
-	height: 400px;	
+	width: 100%;
+    height: 90px;	
 	background-color: #b8aeae17;
+	position: relative;
+    animation-name: findUs;
+    animation-duration: 3s;
 }
 
+@keyframes findUs {
+  0%   { left:1000px; bottom:0px;}
+  25%  { left:50px; bottom:0px;}
+  50%  { left:20px; bottom:0px;}
+  100% { left:0px; bottom:0px;}
+}
+
+
 .finUs-Container{
-	display: flex;
-	justify-content: space-evenly;
-    align-items: center;
-	height: 400px;
-	padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* height: 631px; */
+    padding: 8px;
+    flex-direction: row;
 
 }
 
 .directions, .street , .number, .emaile{
 	display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 10px;
-	font-size: 15px;
+    font-size: 15px;
 }
 
 .directions img{
@@ -142,7 +166,7 @@ li a:hover{
 	width: 350px;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
-	background-color: #b8aeae;
+	background-color: #cfc5c5da;
 }
 
 
@@ -166,11 +190,12 @@ label {
 	border: none;
 }
 
-
-img{    
-    height: 595px;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+.imgForm{    
+	height: 595px;
+    width: 358px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    object-fit: cover;
 }
  
 .btn{
@@ -198,7 +223,6 @@ img{
 .send{
 	color: red;
 	margin-top: 4px;
-
 }
 
 /* Footer */
@@ -227,7 +251,7 @@ h6{
 	font-size: 13px;
 }
 
-.fList img{
+.logoFooter{
 	height: 60px;
 	width: 120px;
 }
@@ -237,6 +261,11 @@ h6{
 	color: #141414;
 	cursor: pointer;
 }
+
+  .social{
+	height: 38px;
+    width: 40px;
+  }  
 
 
 @media

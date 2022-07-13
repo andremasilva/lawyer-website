@@ -8,7 +8,8 @@ body {
     display: flex;
     width: 100%;
     position: fixed;
-    width: 10
+    width: 10;    	
+    z-index:999
 }
 
 .nav-container.sticky{  
@@ -64,7 +65,7 @@ li a:hover{
     display: flex;
     height: 700px;
     width: 100%;
-    background-image: url(https://img.freepik.com/free-photo/low-view-modern-skyscrapers-office-buildings_23-2148836791.jpg?t=st=1656607611~exp=1656608211~hmac=cf95c6ad9c830b833cecf5fddf4a11a06227db7ae547eeafff597fa0e0cc4d2d&w=1480) ;
+    background-image:url(https://img.freepik.com/fotos-gratis/predios-de-escritorios-modernos-com-vista-baixa_23-2148836791.jpg?t=st=1657705543~exp=1657706143~hmac=49364e05b9d8aa01bd6da54c98a0b96f40417313414c545c5632f3aeb5ed3a37&w=1480t=st=1656607611~exp=1656608211~hmac=cf95c6ad9c830b833cecf5fddf4a11a06227db7ae547eeafff597fa0e0cc4d2d&w=1480) ;
     background-size: 100% 100%; 
     padding-top: 35px;
 }
@@ -87,7 +88,16 @@ li a:hover{
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 90px;
-    animation: downThenUp 2s ease-in backwards;
+    position: relative;
+    animation-name: portrait;
+    animation-duration: 3s;
+}
+
+@keyframes portrait {
+  0%   { right:1000px; bottom:0px;}
+  25%  { right:50px; bottom:0px;}
+  50%  { right:30px; bottom:0px;}
+  100% { right:0px; bottom:0px;}
 }
 
 
@@ -96,7 +106,19 @@ li a:hover{
     color: #141414;
     margin-top: 0;
     font-size: 20px;
+    position: relative;
+    animation-name: h4;
+    animation-duration: 2s;
 }
+
+@keyframes h4 {
+  0%   { right:1000px; bottom:0px;}
+  25%  { right:50px; bottom:0px;}
+  50%  { right:20px; bottom:0px;}
+  100% { right:0px; bottom:0px;}
+}
+
+
 
 h2 {
     margin-bottom: 50px;
@@ -168,42 +190,45 @@ height: 500px;
 
 /* Footer */
 .footer{
-    margin-top: 20px;
-    width: 100%;
-    font-size: 12px;
+	margin-top: 20px;
+	width: 100%;
+	font-size: 12px;
 }
 
 .fLists{
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 50px;
 }
 
 .fList{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    flex-direction: column;
-    justify-content: space-between;;
-    align-items: center;
-    
+	display: flex;
+	list-style: none;
+	padding: 0;
+	flex-direction: column;
+	justify-content: space-between;;
+	align-items: center;
+
 }
 h6{
-    font-size: 13px;
+	font-size: 13px;
 }
 
-.fList img{
-    height: 60px;
-    width: 120px;
+.logoFooter{
+	height: 60px;
+	width: 120px;
 }
 
 .ListItem{
-    margin-bottom: 10px;
-    color: #141414;
-    cursor: pointer;
+	margin-bottom: 10px;
+	color: #141414;
+	cursor: pointer;
 }
 
-
+  .social{
+	height: 38px;
+    width: 40px;
+  }  
 
 
 @media
