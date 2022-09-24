@@ -1,239 +1,371 @@
 body {
-    font-family: "Lexend Mega", sans-serif;
-    color: black;    
-    margin:0
+  font-family: "Lexend Mega", sans-serif;
+  color: black;
+  margin: 0;
 }
 
-.nav-container{    
-    display: flex;
-    width: 100%;
+.nav-container {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  width: 10;
+  z-index: 999;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 35em) {
+  .right-side-nav {
+    justify-content: center;
     position: fixed;
-    width: 10;    	
-    z-index:999
-}
+    inset: 0 0 40% 30%;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 15px;
+    background-color: #f5f5f5;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
 
-.nav-container.sticky{  
-    background-color: #f5f5f5f8;
-    transition: 0.5s ease-in-out;
-}
+  .right-side-nav[data-visible="true"] {
+    transform: translateX(0%);
+  }
 
-.logo{
-    height: 80px;
-    width: 200px;
-    cursor: pointer;
-}
-
-.right-side-nav{
+  .nav-items ul {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-right: auto;
-}
-
-.nav-items ul{
-    display: flex;
-    list-style-type: none;
-    gap: 50px;
-}
-
-li a{
-    font: normal 15px/125% "futura",Arial,Helvetica,sans-serif;
-    text-decoration:none;
-    text-transform: uppercase;
-    color: #141414;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 200ms linear 200ms;
-}
-
-li a:hover{
-    text-decoration:underline;
-    opacity: 1;
-
-}
-
-.left-side-nav{
-    display: flex;
     align-items: center;
+    padding: 0;
+  }
+
+  li a {
+    color: #000000 !important;
+  }
+
+  .langues-container ul {
+    margin: 0 20% 0 100%;
+  }
+
+  .mobile-nav-toggle {
+    position: absolute;
+    background-image: url(./images/hamburger.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: none;
+    aspect-ratio: 1;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 9999;
+    display: block;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] {
+    background-image: url(./images/close.png);
+  }
 }
 
-.langues-container ul{
-    list-style-type: none;
-    margin-right: 10px;
+.nav-container.sticky {
+  background-color: #f5f5f5f8;
+  transition: 0.5s ease-in-out;
+}
+
+.logo {
+  height: 80px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.right-side-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.nav-items ul {
+  display: flex;
+  list-style-type: none;
+  gap: 50px;
+}
+
+li a {
+  font: normal 15px/125% "futura", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #141414;
+  cursor: pointer;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+.left-side-nav {
+  display: flex;
+  align-items: center;
+}
+
+.langues-container ul {
+  list-style-type: none;
+  margin-right: 10px;
 }
 
 .mission {
-    display: flex;
-    height: 700px;
-    width: 100%;
-    background-image:url(https://img.freepik.com/fotos-gratis/predios-de-escritorios-modernos-com-vista-baixa_23-2148836791.jpg?t=st=1657705543~exp=1657706143~hmac=49364e05b9d8aa01bd6da54c98a0b96f40417313414c545c5632f3aeb5ed3a37&w=1480t=st=1656607611~exp=1656608211~hmac=cf95c6ad9c830b833cecf5fddf4a11a06227db7ae547eeafff597fa0e0cc4d2d&w=1480) ;
-    background-size: 100% 100%; 
-    padding-top: 35px;
+  display: flex;
+  height: 700px;
+  width: 100%;
+  background-image: url(images/concrete-structure-blue-sky.jpg);
+  background-size: 100% 100%;
+  padding-top: 35px;
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    margin:165px 0  0 100px;
-    width: 50%;
-    height: 30%;
-    color: rgb(31, 29, 29);
-    align-content: center;
-    justify-content: center;
-    
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 165px 0 0 100px;
+  width: 50%;
+  height: 30%;
+  color: rgb(31, 29, 29);
+  align-content: center;
+  justify-content: center;
 }
 
-.content h2{
-    font:"futura",Arial,Helvetica,sans-serif;
-    color: #141414;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 90px;
-    position: relative;
-    animation-name: portrait;
-    animation-duration: 3s;
+.content h2 {
+  font: "futura", Arial, Helvetica, sans-serif;
+  color: #141414;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 90px;
+  position: relative;
+  animation-name: portrait;
+  animation-duration: 3s;
 }
 
 @keyframes portrait {
-  0%   { right:1000px; bottom:0px;}
-  25%  { right:50px; bottom:0px;}
-  50%  { right:30px; bottom:0px;}
-  100% { right:0px; bottom:0px;}
+  0% {
+    right: 1000px;
+    bottom: 0px;
+  }
+  25% {
+    right: 50px;
+    bottom: 0px;
+  }
+  50% {
+    right: 30px;
+    bottom: 0px;
+  }
+  100% {
+    right: 0px;
+    bottom: 0px;
+  }
 }
 
-
-.content h4{
-    font: normal 14px/175% "futura",Arial,Helvetica,sans-serif;
-    color: #141414;
-    margin-top: 0;
-    font-size: 20px;
-    position: relative;
-    animation-name: h4;
-    animation-duration: 2s;
+.content h4 {
+  font: normal 14px/175% "futura", Arial, Helvetica, sans-serif;
+  color: #141414;
+  margin-top: 0;
+  font-size: 20px;
+  position: relative;
+  animation-name: h4;
+  animation-duration: 2s;
 }
 
 @keyframes h4 {
-  0%   { right:1000px; bottom:0px;}
-  25%  { right:50px; bottom:0px;}
-  50%  { right:20px; bottom:0px;}
-  100% { right:0px; bottom:0px;}
+  0% {
+    right: 1000px;
+    bottom: 0px;
+  }
+  25% {
+    right: 50px;
+    bottom: 0px;
+  }
+  50% {
+    right: 20px;
+    bottom: 0px;
+  }
+  100% {
+    right: 0px;
+    bottom: 0px;
+  }
 }
-
-
 
 h2 {
-    margin-bottom: 50px;
-    font-size: 90px;
+  margin-bottom: 50px;
+  font-size: 90px;
 }
 
-.text{
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 14px;
-    margin-right: 68px;
+.text {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 14px;
+  margin-right: 22px;
 }
 
-.team{
-    background-color: #f5f5f5;
-    padding-top: 70px;
-    padding-top: 5px;
-    display: flex;
-    justify-content: center;
+.team {
+  background-color: #f5f5f5;
+  padding-top: 70px;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
 }
 
-p, h3{
-    color: #141414;
+p,
+h3 {
+  color: #141414;
+}
+
+.langWrap {
+  height: 20px;
+  width: 60px;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+
+a {
+  color: rgb(19, 10, 10);
+  font-size: larger;
 }
 
 .teammate {
-    padding: 10px;
-    color: white;
-    flex-basis: 280px;
+  display: flex;
+  /* padding: 10px; */
+  color: white;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 
 .teammate img {
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: auto;
 }
 
-
-.block-container{
-    display: flex;
-    justify-content: space-around;
-    padding: 0 200px 0 200px;
-    align-items: center;
-    margin-bottom: 90px;   
+.block-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 200px 0 200px;
+  align-items: center;
+  margin-bottom: 90px;
 }
 
-.block-left{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 40%;
+.block-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }
 
-.block-left h2{
-font-size: 80px;
-font-family: sans-serif;
-margin-bottom: 15px;
+.block-left h2 {
+  font-size: 80px;
+  font-family: sans-serif;
+  margin-bottom: 15px;
 }
 
-.block-right{
-    display: flex;
+.block-right {
+  display: flex;
 }
 
-.block-img{
-margin-top: 100px;
-height: 500px;
+.block-img {
+  margin-top: 100px;
+  height: 500px;
 }
 
 /* Footer */
-.footer{
-	margin-top: 20px;
-	width: 100%;
-	font-size: 12px;
+.footer {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 12px;
 }
 
-.fLists{
-	display: flex;
-	justify-content: space-around;
-	margin-bottom: 50px;
+.fLists {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 
-.fList{
-	display: flex;
-	list-style: none;
-	padding: 0;
-	flex-direction: column;
-	justify-content: space-between;;
-	align-items: center;
-
+.fList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-h6{
-	font-size: 13px;
-}
-
-.logoFooter{
-	height: 60px;
-	width: 120px;
+h6 {
+  font-size: 13px;
 }
 
-.ListItem{
-	margin-bottom: 10px;
-	color: #141414;
-	cursor: pointer;
+.logoFooter {
+  height: 60px;
+  width: 120px;
 }
 
-  .social{
-	height: 38px;
-    width: 40px;
-  }  
+.ListItem {
+  margin-bottom: 10px;
+  color: #141414;
+  cursor: pointer;
+}
 
+.social {
+  height: 38px;
+  width: 40px;
+}
 
-@media
-(prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .content {
+    margin: 158px 0 0 25px;
+  }
+
+  .content h2 {
+    margin-top: 235px;
+    font-size: 60px;
+  }
+  .content h4 {
+    width: 317px;
+  }
+
+  .block-container {
+    padding: 0;
+  }
+
+  .block-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+
+  .text {
+    margin-right: 0px;
+  }
+
+  .team {
+    justify-content: flex-end;
+  }
+
+  .block-container {
+    flex-direction: column;
+  }
+
+  .fLists {
+    flex-direction: column;
+  }
+
+  .logoFooter {
+    height: 100px;
+    width: 200px;
   }
 }

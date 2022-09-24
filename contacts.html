@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
-	<link rel="shortcut icon" href="/images/logo-removebg.png" type="image/x-icon">
+	<link rel="icon" href="./images/logo-removebgCrop.png" type="image/x-icon">
 	<title>João Lages Advogado</title>
+
 <body>
 	<header>
-		<div id="nav"  class="nav-container">        
+		<div id="nav" class="nav-container">
 			<div class="logo-container">
-			 <img class="logo" src="/images/logo-removebg.png" alt="" srcset="">
+				<img class="logo" src="/images/logo-removebg.png" alt="" srcset="">
 			</div>
-			<div class="right-side-nav">
+
+			<button class="mobile-nav-toggle" aria-controls="right-side-nav" aria-expanded="false">
+				<span class="sr-only"></span>
+			</button>
+
+			<div id="right-side-nav" data-visible="false" class="right-side-nav">
 				<div class="nav-items">
 					<ul id="menu">
 						<li><a href="/index.html">Início</a></li>
@@ -27,114 +34,121 @@
 				<div class="langues-menu">
 					<div class="langues-container">
 						<ul>
-							<li class="langues-FR"><a href="./fr page/frPage.html" hreflang="fr-FR" lang="fr-FR">FR</a></li>
+							<li class="langues-FR"><a href="./fr page/frPage.html" hreflang="fr-FR" lang="fr-FR">FR</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	</header>
-	
-	<div class="main">
-		<div class="mission">
-			<div class="content">
-				<h2>Contactos </h2>
+
+		<div class="main">
+			<div class="mission">
+				<div class="content">
+					<h2>Contactos </h2>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div class="findUs">
-	 <div class="finUs-Container">
-		<div class="directions">
-			<div class="street"> <img src="./images/localpng.png" alt="street" srcset=""> <p>Rua Test Caminha 999 Portugal</p> </div>
-			<div class="number"> <img src="./images/cell.png" alt="number" srcset="">  <p>+351 22546695</p> </div>
-			<div class="emaile"> <img src="./images/o-email.png" alt="emaile" srcset=""> <p>email.test.com </p> </div>
+
+		<div class="findUs">
+			<div class="finUs-Container">
+				<div class="directions">
+					<div class="street"> <img src="./images/localpng.png" alt="street" srcset="">
+						<p>Rua Test Caminha 999 Portugal</p>
+					</div>
+					<div class="number"> <img src="./images/cell.png" alt="number" srcset="">
+						<p>+351 22546695</p>
+					</div>
+					<div class="emaile"> <img src="./images/o-email.png" alt="emaile" srcset="">
+						<p>email.test.com </p>
+					</div>
+				</div>
+			</div>
 		</div>
-	 </div>
-    </div>
-	
-    <div id="Contact" class="contacts">           
+
+		<div id="Contact" class="contacts">
 			<h2>CONTACTE-NOS</h2>
-			<div class="container-block"> 
-			<div class="contacts-container">
-			<form id="form">
-			<div class="form"> 
-				<label for="name">Nome</label>
-				<input type="text" name="name" id="name" size="38" placeholder="Nome" required >
+			<div class="container-block">
+				<div class="contacts-container">
+					<form id="form">
+						<div class="form">
+							<label for="name">Nome</label>
+							<input type="text" name="name" id="name" size="38" placeholder="Nome" required>
 
-				<label for="phone">Nº Telemóvel</label>
-				<input type="text" name="phone" id="phone" size="38" placeholder="9*******" required>
-				<label for="email">Email </label>
+							<label for="phone">Nº Telemóvel</label>
+							<input type="text" name="phone" id="phone" size="38" placeholder="9*******" required>
+							<label for="email">Email </label>
 
-				<input type="email" name="email" id="email_id"placeholder="Email@" size="30" required>
-				<label for="name">Assunto</label>
+							<input type="email" name="email" id="email_id" placeholder="Email@" size="30" required>
+							<label for="name">Assunto</label>
 
-				<input type="text" name="subject" id="subject" size="38" placeholder="" >
-				<textarea name="message" class="form-control"
-				 id="message" cols="30" rows="4" 
-				 placeholder="Escrever aqui" 
-				style="height: 146px;"></textarea>    
-				<input type="submit" class="btn" id="button" value="Send Email" >
-			</div>
-			</form>
-			</div>
-		<div class="map">
-			<div class="map-container">
-			<img class="imgForm" src="./images/side-view-of-cropped-unrecognizable-business-people-working-at-common-desk.jpg" alt="" srcset="">	
+							<input type="text" name="subject" id="subject" size="38" placeholder="">
+							<textarea name="message" class="form-control" id="message" cols="30" rows="4"
+								placeholder="Escrever aqui" style="height: 146px;"></textarea>
+							<input type="submit" class="btn" id="button" value="Send Email">
+						</div>
+					</form>
+				</div>
+				<div class="map">
+					<div class="map-container">
+						<img class="imgForm"
+							src="./images/side-view-of-cropped-unrecognizable-business-people-working-at-common-desk.jpg"
+							alt="" srcset="">
+					</div>
+				</div>
 			</div>
 		</div>
-	   </div>
-	</div>
 
 
-  <footer>
-	<div  class='footer'>
-		<div class="fLists">
-			<ul class="fList">
-				<li class="ListItem">
-					 <img class="logoFooter"
-					  src="/images/logo-removebg.png"
-					   alt="" srcset="">
-					</li>
-				<li class="ListItem"> 
-					Rua test 199
-					<p> 
-					4520- 555 Caminha
-					Portugal
-					</p>
-				</li>
-			</ul>
-			<ul class="fList">
-				<li class="ListItem"> 
-					<h6>CONTACTE-NOS</h6>
-				</li>
-				<li class="ListItem"> 
-					Telefone: +351 9133 445 293
-				   <p> E-mail: geral@test.pt</p></li>
-			</ul>
-			<ul class="fList">
-				<li class="ListItem"> 
-					<h6>SIGA-NOS</h6>
-				</li>
-				<li class="ListItem">                         
-					<a  href="https://www.linkedin.com/in/jo%C3%A3o-lages-586b4a101/" target="_blank"><img class="social" src="./images/linkedin.png" 
-						alt="linkedin" 
-						srcset="">
-					</a>  
-				</li>
-			</ul>
-		</div>
-	</div>
- </footer>
+		<footer>
+			<div class='footer'>
+				<div class="fLists">
+					<ul class="fList">
+						<li class="ListItem">
+							<img class="logoFooter" src="/images/logo-removebg.png" alt="" srcset="">
+						</li>
+						<li class="ListItem">
+							Rua test 199
+							<p>
+								4520- 555 Caminha
+								Portugal
+							</p>
+						</li>
+					</ul>
+					<ul class="fList">
+						<li class="ListItem">
+							<h6>CONTACTE-NOS</h6>
+						</li>
+						<li class="ListItem">
+							Telefone: +351 9133 445 293
+							<p> E-mail: geral@test.pt</p>
+						</li>
+					</ul>
+					<ul class="fList">
+						<li class="ListItem">
+							<h6>SIGA-NOS</h6>
+						</li>
+						<li class="ListItem">
+							<a href="https://www.linkedin.com/in/jo%C3%A3o-lages-586b4a101/" target="_blank"><img
+									class="social" src="./images/linkedin.png" alt="linkedin" srcset="">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
 
- <script src="./app.js"></script>
+		<script src="./app.js"></script>
 
-  <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
- <script type="text/javascript">
-  emailjs.init('Vh9YN3a9rCbIW9NR-')
- </script>
+		<script type="text/javascript">
+			emailjs.init('Vh9YN3a9rCbIW9NR-')
+		</script>
+
+		<script src="./nav.js"></script>
+		<script src="./email.js"></script>
 
 </body>
+
 </html>
